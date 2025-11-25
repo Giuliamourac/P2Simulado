@@ -283,7 +283,25 @@ void exibirElementosArvore(NO* no, int qtEspacos)
 
 void exibirMaiorMenorElemento(NO* no)
 {
-	// Aqui vai seu código 
+	NO* auxE = no->esq;
+
+	while(auxE->esq != NULL)
+	{
+		auxE = auxE->esq;
+	}
+
+	cout << endl << "Menor valor:" << auxE->valor << endl;
+
+	NO* auxD = no->dir;
+
+	while (auxD->dir != NULL)
+	{
+		auxD = auxD->dir;
+	}
+
+	cout << "Maior valor:" << auxD->valor << endl;
+
+	
 
 
 }
